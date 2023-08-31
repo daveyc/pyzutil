@@ -62,3 +62,7 @@ def string(addr: int, length: int, encoding='ibm037', rtrim=False) -> str:
 
 def bytes(addr: int, length: int) -> bytes:
     return storage(addr, length)
+
+
+def tcb() -> int:
+    return ptr32(540)

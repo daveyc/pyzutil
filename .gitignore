@@ -10,6 +10,7 @@ cmake-build-debug
 
 
 *egg-info*
+*.tar.gz
 .buildinfo
 *.d
 *.o

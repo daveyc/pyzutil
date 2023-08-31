@@ -8,9 +8,6 @@
 
 extern "C" {
 
-static odp::mvs_module *callable_service;
-static void *save_area;
-
 double pyzutil_clock() {
     return ((double) clock()) / CLOCKS_PER_SEC;
 }

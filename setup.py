@@ -24,22 +24,23 @@ class BuildExtension(build_ext_orig):
         return super().get_ext_filename(ext_name)
 
 
-#os.environ["CXX"] = "xlclang++"
-#os.environ["CXXFLAGS"] = '-qasmlib=SYS1.MACLIB'
 setup(
     name="pyzutil",
-    version="1.0.0",
+    description="z/OS utilities for Python",
+    long_description = open("README.md", "r").read(),
+    long_description_content_type = 'text/markdown',
+    url="https://github.com/daveyc/pyzutil",
+    version="0.0.1-2",
     license='MIT',
     maintainer='David Crayford',
     maintainer_email='dcrayford@gmail.com',
-    python_requires='>=3.10',
+    python_requires='>=3.9',
     platforms=['any', 'none'],
-    #py_modules=["pyzutil.pyzutil"],
+    py_modules=["pyzutil", "pyzutil.maps"],
     ext_modules=[
         CTypesExtension(
             "pyzutil.libpyzutil",
-            ["pyzutil/src/libpyzutil.cpp"],
-            #extra_compile_args=["-qasm", "-qasmlib=SYS1.MACLIB"],
+            ["libpyzutil.cpp"],
         )
     ],
     cmdclass={'build_ext': BuildExtension},
