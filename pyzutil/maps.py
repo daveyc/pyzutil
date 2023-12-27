@@ -3,9 +3,9 @@ import struct
 
 
 # helper functions
-def ptr32(addr: int) -> int:
+def ptr32(addr: int, high_bit=False) -> int:
     (ptr,) = struct.unpack('>I', storage(addr, 4))
-    return ptr & 0x7FFFFFFF  # return ensuring the high order bit is not set
+    return ptr if high_bit else ptr & 0x7FFFFFFF  # return ensuring the high order bit is not set
 
 
 def ptr24(addr: int) -> int:
