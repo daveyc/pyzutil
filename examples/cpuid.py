@@ -30,8 +30,7 @@ for id in range(cvtmaxmp):
     pcaa = maps.ptr32(cvtpccat + id * 4)
     if pcaa == 0:
         continue
-    pccapcca = maps.string(pcaa, 4)
-    if pccapcca != "PCCA":
+    if maps.string(pcaa, 4) != "PCAA":
         continue
     pccavc = maps.string(pcaa + 4, 2)
     pccacpid = maps.string(pcaa + 6, 6)
