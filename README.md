@@ -2,7 +2,13 @@
 
 z/OS utilities for Python
 
-##  Building
+##  Install
+
+```shell
+pip3 install pyzutil
+```
+
+##  Build
 
 ```shell
 python3 setup.py build
