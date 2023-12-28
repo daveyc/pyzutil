@@ -36,9 +36,9 @@ for id in range(cvtmaxmp):
     pccacpid = maps.string(pcaa + 6, 6)
     pccamdl = maps.string(pcaa + 12, 4)
     pccaattr = maps.uint8(pcaa + 0x178)
-    sp = ''
+    specialty_engine = ''
     if pccaattr & PCCAZIIP:
-        sp += ' zIIP'
+        specialty_engine += ' zIIP'
     if pccaattr & PCCAZAAP:
-        sp += ' zAAP'
-    print(f"{id:03} {pccavc}  {pccacpid} {pccamdl} {sp}")
+        specialty_engine += ' zAAP'
+    print(f"{id:03} {pccavc}  {pccacpid} {pccamdl} {specialty_engine}")
