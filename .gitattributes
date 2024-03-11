@@ -7,11 +7,12 @@
 *.html zos-working-tree=utf-8
 
 # Binary files
-*.jpg binary
-*.png binary
-*.gif binary
-*.zip binary
-*.tar
-*.tar.gz
+*.jpg    binary
+*.png    binary
+*.gif    binary
+*.zip    binary
+*.tar    binary
+*.tar.gz binary
 
-*.doctree
+*.doctree binary
+*.pickle  binary
