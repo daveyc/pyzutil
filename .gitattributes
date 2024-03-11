@@ -2,3 +2,16 @@
 
 # wheel files
 *.whl    binary
+
+# HTML et
+*.html zos-working-tree=utf-8
+
+# Binary files
+*.jpg binary
+*.png binary
+*.gif binary
+*.zip binary
+*.tar
+*.tar.gz
+
+*.doctree
