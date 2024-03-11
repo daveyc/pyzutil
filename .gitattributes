@@ -1,10 +1,10 @@
-* zos-working-tree=iso8859-1 
+* zos-working-tree-encoding=iso8859-1 
 
 # wheel files
 *.whl    binary
 
 # HTML et
-*.html zos-working-tree=utf-8
+*.html zos-working-tree-encoding=utf-8
 
 # Binary files
 *.jpg    binary
