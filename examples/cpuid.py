@@ -24,18 +24,18 @@ cvtpccat = maps.ptr32(cvt + 0x2FC)
 PCCAZIIP = 0x04   # CP is a zIIP
 PCCAZAAP = 0x01   # CP is a zAAP
 
-print(""" ID VER CPUID  MODEL
-         --- --- ------ -----""")
+print(' ID VER CPUID  MODEL')
+print('--- --- ------ -----')
 for id in range(cvtmaxmp):
-    pcaa = maps.ptr32(cvtpccat + id * 4)
-    if pcaa == 0:
+    pcca = maps.ptr32(cvtpccat + id * 4)
+    if pcca == 0:
         continue
-    if maps.string(pcaa, 4) != "PCAA":
+    if maps.string(pcca, 4) != "PCCA":
         continue
-    pccavc = maps.string(pcaa + 4, 2)
-    pccacpid = maps.string(pcaa + 6, 6)
-    pccamdl = maps.string(pcaa + 12, 4)
-    pccaattr = maps.uint8(pcaa + 0x178)
+    pccavc = maps.string(pcca + 4, 2)
+    pccacpid = maps.string(pcca + 6, 6)
+    pccamdl = maps.string(pcca + 12, 4)
+    pccaattr = maps.uint8(pcca + 0x178)
     specialty_engine = ''
     if pccaattr & PCCAZIIP:
         specialty_engine += ' zIIP'
